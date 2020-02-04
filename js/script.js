@@ -27,30 +27,45 @@ length.forEach(function(link){
  });
   */
  var songOne={ 
-     Artist:"Bud Bunny",
+     Artist:"Bad Bunny",
      name:"soy el diablo",
-     Image:"",
-     Link:"",
-    length:""
+     Image:"https://m.media-amazon.com/images/I/A1GNxnRnUbL._SS500_.jpg",
+     Link:"https://www.youtube.com/watch?v=-njVpIGri3M",
+    length:"3:16"
     }
      var songTwo={ 
      Artist:"Daddy Yankee",
      name:"Con Calma",
-     Image:"https://m.media-amazon.com/images/I/A1GNxnRnUbL._SS500_.jpg",
+     Image:"https://i1.sndcdn.com/artworks-000481304058-e96g4s-t500x500.jpg",
      Link:"",
     length:""
     }
      var songThree={ 
-     Artist:"Radicamos En South Central",
-     name:"Fuerza Regida",
+     Artist:"Fuerza Regida",
+     name:"Raicamos En South Central",
      Image:"",
      Link:"",
     length:""
     }
-    var Music = [songOne, songTwo, songThree, ]
+    var music = [songOne, songTwo, songThree, ]
     
-    //music.forEach(function(music) {
-    //$('.music').append()
-//} );
- $("songOne").append("<p> Artist : "+songOne["Artist"]+"</p>");
- $("songTwo").append("<p> Artist : "+info[""]+"</p>");
+music.forEach(function(song) {
+    $(".songName").append('<p>'+song.name+'</p>')
+    $(".ImageLink").append('<p>'+song.Image+'</p>')
+    $(".ArtistName").append('<p>'+song.Artist+'</p>')
+    $(".Length").append('<p>'+song.length+'<p/>')
+    $(".songLink").append('<p>'+song.Link+'</p>')
+});
+$(".button").click(function(){
+     var newSong={ 
+     Artist:$("artist").val(),
+     name:$("song").val(),
+     Image:$("image").val(),
+     Link:$("link").val(),
+    length:$("length").val();
+    }
+
+})
+
+// $("songOne").append("<p> Artist : "+songOne["Artist"]+"</p>");
+// $("songTwo").append("<p> Artist : "+info[""]+"</p>");
